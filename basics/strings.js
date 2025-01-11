@@ -27,6 +27,7 @@ const str1 = "    aksgh    "
 console.log(str1)
 console.log(str1.trim())
 
+
 const url = "https://www.akash.com/aksh%20u"
 
 console.log(url.replace('%20', '-'))
