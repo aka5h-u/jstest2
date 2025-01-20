@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tut 2</title>
+</head>
+<body style="background-color: #212121; color:white">
+    <div class="parent" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+    <script>
+        const parentEle = document.querySelector(".parent")
+        // console.log(parentEle)
+        // console.log(parentEle.children[0].textContent)
+        //can loop through these
+        // for(let i =0; i < parentEle.children.length; i++){
+        //     console.log(parentEle.children[i].innerHTML)
+        // }
+
+        parentEle.children[0].style.color = "orange"
+        // console.log(parentEle.firstElementChild)
+
+        const days = document.querySelector(".day")
+        //console.log(days)
+        // console.log(days.parentElement)
+        // console.log(days.nextElementSibling)
+
+        console.log("Nodes : " , parentEle.childNodes)
+    </script>
+</body>
+</html>
