@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events tut</title>
+
+</head>
+<body>
+    <h1>Test</h1>
+    <button id="btn">Stop</button>
+
+    <script>
+        const sayName = function(){
+            console.log(`My name is ${"Akash"}`)
+        }
+        setTimeout( sayName ,3000)
+
+        // setInterval(()=>{
+        //     console.log("AKash")
+        // }, 1000)
+
+        const changeName = function(){
+            document.querySelector('h1').innerHTML = "Changing name after Timeout"
+        }
+        const changeMe = setTimeout(changeName, 3000);
+        //I want to clear timeout on a button event
+        let btn = document.querySelector("#btn")
+        btn.addEventListener('click', ()=>{
+            clearTimeout(changeMe);
+        })
+    </script>
+</body>
+</html>

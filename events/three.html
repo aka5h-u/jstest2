@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event </title>
+</head>
+<body>
+    <h1>Learning JavaScript from Tuts</h1>
+    <button id="start-btn">Start</button>
+    <button id="stop-btn">Stop</button>
+    
+    <script>
+         let printTimer;
+        const start = document.querySelector('#start-btn')
+        const stop = document.querySelector('#stop-btn')
+
+        const printMe = function(str){
+            console.log(str, Date.now())
+        }
+      
+        start.addEventListener('click' , function(){
+             printTimer  =setInterval(printMe, 2000, "Akash")
+        })
+
+        stop.addEventListener('click', function(){
+            printTimer=  clearInterval(printTimer)
+        })
+    </script>
+</body>
+</html>
